@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Loveiplant Wordpress"
+title:  "Loveiplant Wordpress Structure"
 date:   2020-09-13 21:13:07 +0000
 categories: wordpress
 ---
