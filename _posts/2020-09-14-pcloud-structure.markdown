@@ -1,11 +1,19 @@
 ---
 layout: post
 title:  "PCloud Structure"
-date:   2020-09-13 22:13:07 +0000
+date:   2020-09-13 22:13:07 +0800
 categories: pcloud
 ---
 
-# 1. PCloud Portal Structure Diagram
+# 1. PCloud Service Original Structure Diagram
+
+* This is the complete AWS infrastructure diagram of PCloud service.
+
+![pcloud service original diagram](/assets/pcloud/pcloud-ecowork.png)
+
+* The complete insfrastructure is too expensive for persinal project, so I modified to the following single linode server insfrastructure.
+
+# 2. PCloud Portal Structure Diagram for personal project in Linode
 
 * PCloud Portal is a Rails Web APP allowing user pair and configure their devices.
 
@@ -18,7 +26,7 @@ Try demo: [PCloud Portal demo][pcloud-portal]
 ![image alt text](/assets/pcloud/package-list-flow.png)
 
 
-# 2. PCloud SSO Structure Diagram
+# 3. PCloud SSO Structure Diagram for personal project in Linode
 
 * An user Register and Sign-in Center allows all Web APP can share the same member management center.
 * Implement Google and Facebook Sign-in.
