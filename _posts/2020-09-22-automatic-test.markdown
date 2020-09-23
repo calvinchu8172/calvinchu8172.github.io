@@ -8,9 +8,13 @@ categories: pcloud
 # Tools:
 
 * Node.js: Mocha
-* Ruby on Rails: Cucumber, Capybara, Selenium
-* CI(Continuous Integration): Gitlab-CI, Travis-CI, Jenkins
-* [Test Report]({% link /assets/automatic-test/report.html %})
+* Ruby on Rails: Cucumber, Rspec
+* Frontend: Capybara, Selenium
+* CI(Continuous Integration): Gitlab-CI, Travis-CI, Circle-CI, Jenkins
+* Version control: Git, Gitflow
+    ![Gitflow]({% link /assets/automatic-test/gitflow.png %})
+    ![CI CD]({% link /assets/automatic-test/ci-cd-flow.png %})
+[Test Report]({% link /assets/automatic-test/report.html %})
 
 
 
