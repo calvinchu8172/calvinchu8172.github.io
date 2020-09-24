@@ -11,10 +11,10 @@ categories: interview
 
     [Profile](https://profile.lovefunthing.com/profiles/tw)
 
-2. 在Web端的工作中請介紹
+2. 在 Web 端的工作中請介紹
 
 
-    1. Loveiplant中網站的規劃架構(含雲端服務)與使用的技術. 規劃的理由與技術的評估理由是?
+    1. Loveiplant 中網站的規劃架構(含雲端服務)與使用的技術. 規劃的理由與技術的評估理由是?
 
         [Answer]({% link _posts/2020-09-14-loveiplant-wordpress-structure.markdown %})
 
@@ -22,23 +22,23 @@ categories: interview
 
         [Answer]({% post_url 2020-09-14-pcloud-structure %})
 
-    3. 在Web開發中該做哪些測試
+    3. 在 Web 開發中該做哪些測試
 
         [Answer]({% link _posts/2020-09-22-automatic-test.markdown %})
 
 
-3. 請闡述在Software Project流程如何進行(以益科為例)? 要產出哪些文件? 為何要產出這些文件?
+3. 請闡述在 Software Project 流程如何進行(以益科為例)? 要產出哪些文件? 為何要產出這些文件?
 
     [Answer]({% link _posts/2020-09-23-software-project-development-process.markdown %})
 
-4. 請闡述在JDI與奇美電子的工作內容, 要如何確認所選用的面板或電子零件是可以符合客戶需求與預算成本內?
+4. 請闡述在 JDI 與奇美電子的工作內容, 要如何確認所選用的面板或電子零件是可以符合客戶需求與預算成本內?
 
     [Answer]({% link _posts/2020-09-23-hardware-work-experience.markdown %})
 
 
 ### 模擬題
 
-1. 身為 InstaShow Web 與軟體 Product Technical Owner。 如果我今天需要在外 Survey 應用搭載在 InstaShow Platform(OS假設不限)，你會希望有那些應用可以加上去? 你的理由? 使用者獲得的好處是啥麼？
+1. 身為 InstaShow Web 與軟體 Product Technical Owner。 如果我今天需要在外 Survey 應用搭載在 InstaShow Platform(OS 假設不限)，你會希望有那些應用可以加上去? 你的理由? 使用者獲得的好處是啥麼？
 
     [Answer]({% link _posts/2020-09-23-add-instashow-function.markdown %})
 

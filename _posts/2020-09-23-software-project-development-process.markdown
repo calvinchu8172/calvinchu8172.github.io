@@ -10,11 +10,15 @@ categories: webrtc
 1. 外部客戶或內部產品 PM 提出需求
   * PRD(Product Requirement Document)
   * Budget
+  * Schedule
+  * Consultation with R&D
 
 2. 前端，UI 設計 與 UX 使用者體驗
   * Wireframe
   * User Story
   * User Flow
+  * RWD(Responsive Web Design)(Web, Mobile Layout)
+  * Design Style
 
 3. 後端與架構
   * SA(System Analysis)
@@ -40,6 +44,7 @@ categories: webrtc
 
 8. 維運
   * DevOps Settings Document
+  * Source Code
 
 
 
