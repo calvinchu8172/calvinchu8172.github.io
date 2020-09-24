@@ -27,6 +27,7 @@ categories: webrtc
 ### Object Storage Structure
 
 ![Structure](/assets/open-api/structure.png)
+
 <!-- 架構中每個項目的用途為：
 
 * P.Cloud User 在 SSO 註冊，登入，取得 Access Token
