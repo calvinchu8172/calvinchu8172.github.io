@@ -13,7 +13,7 @@ categories: webrtc
     * Own-brand company like **ASUS**, **HTC**, **SONY**, **Garmin** and **Panasonic**.
     * OEM and ODM manufactue, like **CCI** and **FIH**.
 * Project managed both Taiwan clients and internal engineering (R&D in Japan and Manufacturing in China) teams, making sure projects were completed on schedule.
-* Periodically promote new product to Taiwanese manufactures.
+* Periodically promote new products to Taiwanese manufactures.
 
 
 ## CMI Electrical Engineer
@@ -25,21 +25,21 @@ categories: webrtc
 
 1. KR(Kick-off Run)
   * Collabrate with display panel designer.
-  * Survery Display IC.
-  * Survey FPC.
-  * FPC circuit design.
+  * Survery **Display IC**.
+  * Survey **FPC**.
+  * **FPC circuit design**.
   * Survey passive components.
   * Manually assemble small quantity to test performance.
-  * Start programming the code of embedded system manufacture tools for every station and optical engineers testing.
+  * Start **programming the code** of **embedded system manufacture tools** for every station and optical engineers testing.
   * Program firmware into Display IC to adjust optical characteristics.
 2. DR(Development Run)
   * Initail trial run in factory.
   * Display Panel bound with IC, FPC and passive components in Factory.
-  * Verify EE, ME, Optical and reliability performance.
+  * **Verify EE, ME, Optical and reliability performance**.
   * Improve the performance.
   * Improve the code of embedded system manufacture tools to shorten time.
-  * Solve Issues.
-  * Bussiness trip to factory in China.
+  * **Solve Issues**.
+  * **Bussiness trip to factory in China**.
 3. SR(Sample Run)
   * Second trial run after modify design.
   * Verify EE, ME, Optical and reliability performance again.
@@ -54,11 +54,12 @@ categories: webrtc
   * Celebrate!
 
 ### How to survey components?
-  * EE performance meets spec.
-  * Collaberated experience.
-  * Aggressive support attitude.
-  * Less issues before.
-  * Good reputation.
+  * EE performance **meets spec**.
+  * **Comfortable collaberation experience**.
+  * **Aggressive** support attitude.
+  * **Less issues** before.
+  * **Good reputation**.
+  * **Reasonable price**.
 
 
 ### Display Module Spec
