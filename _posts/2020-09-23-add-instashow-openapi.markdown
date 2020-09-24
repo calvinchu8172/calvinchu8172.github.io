@@ -9,7 +9,7 @@ categories: webrtc
 
 ### InstaShow Object Storage API 是什麼服務？最主要的用途是什麼？
 
-* Object Storage 是用來提供所有串接 InstaShow 的硬體裝置（Device）或行動應用程式（Mobile App）存取 InstaShow User 資料的服務。
+* Object Storage 是用來提供所有串接 InstaShow 的硬體裝置（Device）或行動應用程式（Mobile APP or Web APP）存取 InstaShow User 資料的服務。
 
 ### 設想可能應用的情景，例如：
 
@@ -18,38 +18,46 @@ categories: webrtc
 * 某個 Device 會列出 InstaShow User 所有的 Mobile APP。
 * 某個 Device 或 Mobile APP 會存取 InstaShow User 的圖片、影片或其他檔案。
 
-### Object Storage Work Flow
-流程為 User -> Mobile or Web Application -> SSO Server -> Application Domain -> Object Key -> Content 。
+### Device 或 APP 可以存取的資料範圍為何？
 
+* 所有的 Mobile App 在透過 SSO Server 取得 InstaShow User 的 **Access Token** 後，只能存取該 InstaShow User 下對應的 Mobile APP 內所有的資料。
+
+### Device 或 APP 要怎麼使用 Object Storage？
+
+* Mobile App 透過 SSO Server 取得 InstaShow User 的 **Access Token** 後，參數帶上 **Access Token** 驗證，可使用 **RESTful API** 提交存取：
+
+### Object Storage Work Flow
+
+* 流程為 User -> Mobile or Web Application -> SSO Server -> Get Access Token -> Application Domain -> Object Key -> Content 。
 
 ![Work Flow](/assets/open-api/work-flow.png)
 
 ### Object Storage Structure
 
-![Structure](/assets/open-api/structure.png)
+![Structure](/assets/open-api/lambda-structure.png)
 
-<!-- 架構中每個項目的用途為：
+架構中每個項目的用途為：
 
-* P.Cloud User 在 SSO 註冊，登入，取得 Access Token
-* P.Cloud Application：需要在 SSO 後台建立 Application
-* P.Cloud Application 旗下可能會有多個 Application Domain，代表所屬的功能
-* Application Domain 旗下可能會有多個 Object Key，代表存取某個 Resource 的連結，例如 S3，或 DynamoDB 某個 Table 的欄位裡的 json
-* Content 表示經由 `/<User>/<Application>/<Application Domain>/<Object Key>` 組合出的 path，所存取的內容
-  * Ex: `/Ben/ipcam/monitor/motion_detection_201702171630`
-![image alt text](meeting-image-1.jpg) -->
+1. Administrator 需要在 SSO Server 後台建立 Application，使 Application 得以登入 SSO Server。
+2. InstaShow User 使用 Application 在 SSO 註冊或登入，取得 Access Token。
+3. 取得 Access token 後，Access Token 只會對應一個 Application，所以 Lambda 的 API 路由不需要有 `/application/`，參數帶 Access Token，Lambda 會去搜尋對應的 Application。
+4. Application 旗下可能會有多個 Application Domain，代表所屬的功能。
+5. Application Domain 旗下可能會有多個 Object Key，代表存取某個資源（Resource）的連結，例如 S3 裡的檔案，或 DynamoDB 某個 Table 的欄位裡的 json 格式資料。
 
-<!-- ##### 內部備註
 
-* Benjamin 繪製的概念圖 @ 2017-02-15 （圖待補）
-* 原本 Benjamin 的概念設計可以同時支援 Per User 及 Per Device 的儲存方式，但現階段應該只需要 Per User 類的就夠了。 -->
+### API 路由規劃
 
-### Device 或 Mobile App 可以存取的資料範圍為何？
+#### EC2 SSO Server 部分（路由加上 v1 為版本）
 
-所有的 Mobile App 在透過 SSO Server 取得 InstaShow User 的 **Access Token** 後，可存取該 InstaShow User 下對應的 Mobile APP 內所有的資料。
+* 列出 User 所有 Application
+  * `GET v1/applications`
+* 列出 User 特定 Application 的詳細資料
+  * `GET v1/applications/(application_name)`
+  * EX: `GET v1/applications/picture_sharing_app`
+* 建立、修改、刪除 User 的 Application 不提供 API，因為只有 Administrator 才有權限
 
-### Device 或 Mobile App 要怎麼使用 Object Storage？
 
-Mobile App 透過 SSO Server 取得 InstaShow User 的 **Access Token** 後，參數帶上 **Access Token** 驗證，可使用下列的 **RESTful API** 提交存取，`v1` 為版本：
+#### Lambda Object Storage 部分
 
 * 列出所有 Application Domain
   * `GET v1/domains`
