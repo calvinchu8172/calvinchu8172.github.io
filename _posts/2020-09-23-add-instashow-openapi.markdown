@@ -18,12 +18,15 @@ categories: webrtc
 * 某個 Device 會列出 InstaShow User 所有的 Mobile APP。
 * 某個 Device 或 Mobile APP 會存取 InstaShow User 的圖片、影片或其他檔案。
 
-### Object Storage Structure
+### Object Storage Work Flow
 流程為 User -> Mobile or Web Application -> SSO Server -> Application Domain -> Object Key -> Content 。
 
 
 ![Work Flow](/assets/open-api/work-flow.png)
 
+### Object Storage Structure
+
+![Structure](/assets/open-api/structure.png)
 <!-- 架構中每個項目的用途為：
 
 * P.Cloud User 在 SSO 註冊，登入，取得 Access Token
@@ -79,8 +82,6 @@ Mobile App 透過 SSO Server 取得 InstaShow User 的 **Access Token** 後，�
   * Domain (DynamoDB，要有 applicaiton_id，domain_name 等...欄位)
   * Object Key (DynamoDB，要有 Domain_id，object_key 等...欄位)
 
-## 架構圖
-![Structure](/assets/open-api/object-storage-structure.png)
 
 
 
