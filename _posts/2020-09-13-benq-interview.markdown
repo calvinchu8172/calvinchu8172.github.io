@@ -46,7 +46,7 @@ categories: interview
 
     [Answer]({% link _posts/2020-09-23-evaluate-outsourcing.markdown %})
 
-3. 假如 InstShow 有搭載 Video Conference 的需求，你會怎麼設計雲端架構讓把 Local 畫面轉成 Remote 多方會議？採用此架構的理由是？
+3. 假如 InstaShow 有搭載 Video Conference 的需求，你會怎麼設計雲端架構讓把 Local 畫面轉成 Remote 多方會議？採用此架構的理由是？
 
     [Answer]({% link _posts/2020-09-23-video-conference.markdown %})
 

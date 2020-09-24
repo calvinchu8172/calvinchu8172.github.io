@@ -7,6 +7,9 @@ categories: webrtc
 
 # Add InstaShow Function
 
+* 檔案分享，一鍵檔案同時傳給現場有連接 InstaShow 的電腦
+
+
 
 
 
