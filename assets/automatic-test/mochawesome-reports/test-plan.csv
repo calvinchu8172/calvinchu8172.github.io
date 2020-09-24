@@ -1,0 +1,373 @@
+"OSS_003","Create Domain API"
+"","","OSS_003_01","If the certificate_serial param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.2"",""message"":""Missing Required Parameter: certificate_serial""}"
+"","","OSS_003_02","If the certificate_serial param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.3"",""message"":""Invalid certificate_serial""}"
+"","","OSS_003_03","If the X-Api-Key Header in request is missing.
+Server should return {""httpStatus"":403,""message"":""Forbidden""}"
+"","","OSS_003_04","If the X-Signature Header in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.0"",""message"":""Missing Required Header: X-Signature""}"
+"","","OSS_003_05","If the signature in request failed the verification.
+Server should return {""httpStatus"":400,""code"":""400.1"",""message"":""Invalid signature""}"
+"","","OSS_003_06","If the access_token param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.6"",""message"":""Missing Required Parameter: access_token""}"
+"","","OSS_003_07","If the access_token param in request is invalid.
+Server should return {""httpStatus"":401,""code"":""401.0"",""message"":""Invalid access_token""}"
+"","","OSS_003_08","If the access_token param in request is expired.
+Server should return {""httpStatus"":401,""code"":""401.1"",""message"":""Access Token Expired""}"
+"","","OSS_003_09","If the domain param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.7"",""message"":""Missing Required Parameter: domain""}"
+"","","OSS_003_10_1","If the domain param is invalid.
+Invalid domain name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_003_10_2","If the domain param is invalid.
+Invalid domain name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_003_10_3","If the domain param is invalid.
+Invalid domain name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_003_11","If the domain already exists.
+Server should return {""httpStatus"":400,""code"":""400.11"",""message"":""Domain Already Exists""}"
+"","","OSS_003_12","If it has already reached 2 domains limit.
+Server should return {""httpStatus"":400,""code"":""400.12"",""message"":""Exceeded The Limit Of 2 Domains""}"
+"","","OSS_003_13","Successfully created domain item.
+Server should return {""httpStatus"":200}"
+"OSS_010","Update Domain API"
+"","","OSS_010_01","If the certificate_serial param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.2"",""message"":""Missing Required Parameter: certificate_serial""}"
+"","","OSS_010_02","If the certificate_serial param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.3"",""message"":""Invalid certificate_serial""}"
+"","","OSS_010_03","If the X-Api-Key Header in request is missing.
+Server should return {""httpStatus"":403,""message"":""Forbidden""}"
+"","","OSS_010_04","If the X-Signature Header in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.0"",""message"":""Missing Required Header: X-Signature""}"
+"","","OSS_010_05","If the signature in request failed the verification.
+Server should return {""httpStatus"":400,""code"":""400.1"",""message"":""Invalid signature""}"
+"","","OSS_010_06","If the access_token param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.6"",""message"":""Missing Required Parameter: access_token""}"
+"","","OSS_010_07","If the access_token param in request is invalid.
+Server should return {""httpStatus"":401,""code"":""401.0"",""message"":""Invalid access_token""}"
+"","","OSS_010_08","If the access_token param in request is expired.
+Server should return {""httpStatus"":401,""code"":""401.1"",""message"":""Access Token Expired""}"
+"","","OSS_010_09_1","If the domain in path is invalid.
+Invalid domain name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_010_09_2","If the domain in path is invalid.
+Invalid domain name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_010_09_3","If the domain in path is invalid.
+Invalid domain name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_010_10_1","If the new domain param is invalid.
+Invalid new domain name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.10"",""message"":""Invalid new_domain""}"
+"","","OSS_010_10_2","If the new domain param is invalid.
+Invalid new domain name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.10"",""message"":""Invalid new_domain""}"
+"","","OSS_010_10_2","If the new domain param is invalid.
+Invalid new domain name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.10"",""message"":""Invalid new_domain""}"
+"","","OSS_010_11","Cannot find domain.
+Server should return {""httpStatus"":404,""code"":""404.0"",""message"":""Domain Not Found""}"
+"","","OSS_010_12","Cannot update domain item. New domain has already exist.
+Server should return {""httpStatus"":400,""code"":""400.11"",""message"":""Domain Already Exists""}"
+"","","OSS_010_13","Successfully updated domain item.
+Server should return {""httpStatus"":200}"
+"OSS_006","Get Domain API"
+"","","OSS_006_01","If the certificate_serial param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.2"",""message"":""Missing Required Parameter: certificate_serial""}"
+"","","OSS_006_02","If the certificate_serial param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.3"",""message"":""Invalid certificate_serial""}"
+"","","OSS_006_03","If the X-Api-Key Header in request is missing.
+Server should return {""httpStatus"":403,""message"":""Forbidden""}"
+"","","OSS_006_04","If the X-Signature Header in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.0"",""message"":""Missing Required Header: X-Signature""}"
+"","","OSS_006_05","If the signature in request failed the verification.
+Server should return {""httpStatus"":400,""code"":""400.1"",""message"":""Invalid signature""}"
+"","","OSS_006_06","If the access_token param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.6"",""message"":""Missing Required Parameter: access_token""}"
+"","","OSS_006_07","If the access_token param in request is invalid.
+Server should return {""httpStatus"":401,""code"":""401.0"",""message"":""Invalid access_token""}"
+"","","OSS_006_08","If the access_token param in request is expired.
+Server should return {""httpStatus"":401,""code"":""401.1"",""message"":""Access Token Expired""}"
+"","","OSS_006_09_1","If the domain in path is invalid.
+Invalid domain name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_006_09_2","If the domain in path is invalid.
+Invalid domain name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_010_09_3","If the domain in path is invalid.
+Invalid domain name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_006_10","Cannot find domain.
+Server should return {""httpStatus"":404,""code"":""404.0"",""message"":""Domain Not Found""}"
+"","","OSS_006_11","Successfully got domain item.
+Server should return {""httpStatus"":200}"
+"OSS_008","List Domains API"
+"","","OSS_008_01","If the certificate_serial param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.2"",""message"":""Missing Required Parameter: certificate_serial""}"
+"","","OSS_008_02","If the certificate_serial param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.3"",""message"":""Invalid certificate_serial""}"
+"","","OSS_008_03","If the X-Api-Key Header in request is missing.
+Server should return {""httpStatus"":403,""message"":""Forbidden""}"
+"","","OSS_008_04","If the X-Signature Header in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.0"",""message"":""Missing Required Header: X-Signature""}"
+"","","OSS_008_05","If the signature in request failed the verification.
+Server should return {""httpStatus"":400,""code"":""400.1"",""message"":""Invalid signature""}"
+"","","OSS_008_06","If the access_token param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.6"",""message"":""Missing Required Parameter: access_token""}"
+"","","OSS_008_07","If the access_token param in request is invalid.
+Server should return {""httpStatus"":401,""code"":""401.0"",""message"":""Invalid access_token""}"
+"","","OSS_008_08","If the access_token param in request is expired.
+Server should return {""httpStatus"":401,""code"":""401.1"",""message"":""Access Token Expired""}"
+"","","OSS_008_09","Successfully list empty domain item.
+Server should return {""httpStatus"":200,""data"":[]}"
+"","","OSS_008_10","Successfully list domain item.
+Server should return {""httpStatus"":200}"
+"OSS_012","Delete Domain API"
+"","","OSS_012_01","If the certificate_serial param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.2"",""message"":""Missing Required Parameter: certificate_serial""}"
+"","","OSS_012_02","If the certificate_serial param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.3"",""message"":""Invalid certificate_serial""}"
+"","","OSS_012_03","If the X-Api-Key Header in request is missing.
+Server should return {""httpStatus"":403,""message"":""Forbidden""}"
+"","","OSS_012_04","If the X-Signature Header in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.0"",""message"":""Missing Required Header: X-Signature""}"
+"","","OSS_012_05","If the signature in request failed the verification.
+Server should return {""httpStatus"":400,""code"":""400.1"",""message"":""Invalid signature""}"
+"","","OSS_012_06","If the access_token param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.6"",""message"":""Missing Required Parameter: access_token""}"
+"","","OSS_012_07","If the access_token param in request is invalid.
+Server should return {""httpStatus"":401,""code"":""401.0"",""message"":""Invalid access_token""}"
+"","","OSS_012_08","If the access_token param in request is expired.
+Server should return {""httpStatus"":401,""code"":""401.1"",""message"":""Access Token Expired""}"
+"","","OSS_012_09_1","If the domain in path is invalid.
+Invalid domain name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_012_09_2","If the domain in path is invalid.
+Invalid domain name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_012_09_3","If the domain in path is invalid.
+Invalid domain name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_012_10","Cannot find domain.
+Server should return {""httpStatus"":404,""code"":""404.0"",""message"":""Domain Not Found""}"
+"","","OSS_012_11","Successfully deleted domain item.
+Server should return {""httpStatus"":200}"
+"OSS_004","Create Object API"
+"","","OSS_004_01","If the X-Api-Key Header in request is missing.
+Server should return {""httpStatus"":403,""message"":""Forbidden""}"
+"","","OSS_004_02","If the X-Signature Header in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.0"",""message"":""Missing Required Header: X-Signature""}"
+"","","OSS_004_03","If the certificate_serial param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.2"",""message"":""Missing Required Parameter: certificate_serial""}"
+"","","OSS_004_04","If the certificate_serial param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.3"",""message"":""Invalid certificate_serial""}"
+"","","OSS_004_05","If the signature in request failed the verification.
+Server should return {""httpStatus"":400,""code"":""400.1"",""message"":""Invalid signature""}"
+"","","OSS_004_06","If the access_token param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.6"",""message"":""Missing Required Parameter: access_token""}"
+"","","OSS_004_07_1","If the key param is invalid.
+Invalid object name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.14"",""message"":""Invalid key""}"
+"","","OSS_004_07_2","If the key param is invalid.
+Invalid object name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.14"",""message"":""Invalid key""}"
+"","","OSS_004_07_3","If the key param is invalid.
+Invalid object name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.14"",""message"":""Invalid key""}"
+"","","OSS_004_08","If the content_type param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.18"",""message"":""Missing Required Parameter: content_type""}"
+"","","OSS_004_09","If the content_type param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.19"",""message"":""Invalid content_type""}"
+"","","OSS_004_10","If the content param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.20"",""message"":""Missing Required Parameter: content""}"
+"","","OSS_004_11","If the content param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.21"",""message"":""Invalid content""}"
+"","","OSS_004_12","If the access_token param in request is invalid.
+Server should return {""httpStatus"":401,""code"":""401.0"",""message"":""Invalid access_token""}"
+"","","OSS_004_13","If the access_token param in request is expired.
+Server should return {""httpStatus"":401,""code"":""401.1"",""message"":""Access Token Expired""}"
+"","","OSS_004_14","Cannot find domain.
+Server should return {""httpStatus"":404,""code"":""404.0"",""message"":""Domain Not Found""}"
+"","","OSS_004_15","If the key already exists.
+Server should return {""httpStatus"":400,""code"":""400.16"",""message"":""Key Already Exists""}"
+"","","OSS_004_16","Successfully created json object item.
+Server should return {""httpStatus"":200}"
+"","","OSS_004_17","Successfully created file object item.
+Server should return {""httpStatus"":200}"
+"","","OSS_004_18","Successfully created json object item with content contains chinese words.
+Server should return {""httpStatus"":200}"
+"OSS_011","Update Object API"
+"","","OSS_011_01","If the X-Api-Key Header in request is missing.
+Server should return {""httpStatus"":403,""message"":""Forbidden""}"
+"","","OSS_011_02","If the X-Signature Header in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.0"",""message"":""Missing Required Header: X-Signature""}"
+"","","OSS_011_03","If the certificate_serial param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.2"",""message"":""Missing Required Parameter: certificate_serial""}"
+"","","OSS_011_04","If the certificate_serial param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.3"",""message"":""Invalid certificate_serial""}"
+"","","OSS_011_05","If the signature in request failed the verification.
+Server should return {""httpStatus"":400,""code"":""400.1"",""message"":""Invalid signature""}"
+"","","OSS_011_06","If the access_token param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.6"",""message"":""Missing Required Parameter: access_token""}"
+"","","OSS_011_07","If the access_token param in request is invalid.
+Server should return {""httpStatus"":401,""code"":""401.0"",""message"":""Invalid access_token""}"
+"","","OSS_011_08","If the access_token param in request is expired.
+Server should return {""httpStatus"":401,""code"":""401.1"",""message"":""Access Token Expired""}"
+"","","OSS_011_09","If the new key in param is invalid.
+Server should return {""httpStatus"":400,""code"":""400.15"",""message"":""Invalid new_key""}"
+"","","OSS_011_10","If the content_type param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.18"",""message"":""Missing Required Parameter: content_type""}"
+"","","OSS_011_11","If the content_type param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.19"",""message"":""Invalid content_type""}"
+"","","OSS_011_12","If the content param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.20"",""message"":""Missing Required Parameter: content""}"
+"","","OSS_011_13","If the content param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.21"",""message"":""Invalid content""}"
+"","","OSS_011_14","Cannot find domain.
+Server should return {""httpStatus"":404,""code"":""404.0"",""message"":""Domain Not Found""}"
+"","","OSS_011_15","Cannot find object.
+Server should return {""httpStatus"":404,""code"":""404.1"",""message"":""Object Not Found""}"
+"","","OSS_011_16","If the key already exists.
+Server should return {""httpStatus"":400,""code"":""400.16"",""message"":""Key Already Exists""}"
+"","","OSS_011_17","Successfully updated json object item to json object item.
+Server should return {""httpStatus"":200}"
+"","","OSS_011_18","Successfully updated json object item to file object item.
+Server should return {""httpStatus"":200}"
+"","","OSS_011_19","Successfully updated file object item to file object item.
+Server should return {""httpStatus"":200}"
+"","","OSS_011_20","Successfully updated file object item to json object item.
+Server should return {""httpStatus"":200}"
+"OSS_007","Get Object API"
+"","","OSS_007_01","If the certificate_serial param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.2"",""message"":""Missing Required Parameter: certificate_serial""}"
+"","","OSS_007_02","If the certificate_serial param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.3"",""message"":""Invalid certificate_serial""}"
+"","","OSS_007_03","If the X-Api-Key Header in request is missing.
+Server should return {""httpStatus"":403,""message"":""Forbidden""}"
+"","","OSS_007_04","If the X-Signature Header in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.0"",""message"":""Missing Required Header: X-Signature""}"
+"","","OSS_007_05","If the signature in request failed the verification.
+Server should return {""httpStatus"":400,""code"":""400.1"",""message"":""Invalid signature""}"
+"","","OSS_007_06","If the access_token param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.6"",""message"":""Missing Required Parameter: access_token""}"
+"","","OSS_007_07","If the access_token param in request is invalid.
+Server should return {""httpStatus"":401,""code"":""401.0"",""message"":""Invalid access_token""}"
+"","","OSS_007_08","If the access_token param in request is expired.
+Server should return {""httpStatus"":401,""code"":""401.1"",""message"":""Access Token Expired""}"
+"","","OSS_007_09_1","If the domain in path is invalid.
+Invalid domain name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_007_09_2","If the domain in path is invalid.
+Invalid domain name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_007_09_3","If the domain in path is invalid.
+Invalid domain name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_007_10_1","If the key param is invalid.
+Invalid object name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.14"",""message"":""Invalid key""}"
+"","","OSS_007_10_2","If the key param is invalid.
+Invalid object name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.14"",""message"":""Invalid key""}"
+"","","OSS_007_10_3","If the key param is invalid.
+Invalid object name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.14"",""message"":""Invalid key""}"
+"","","OSS_007_11","Cannot find domain.
+Server should return {""httpStatus"":404,""code"":""404.0"",""message"":""Domain Not Found""}"
+"","","OSS_007_12","Cannot find object.
+Server should return {""httpStatus"":404,""code"":""404.1"",""message"":""Object Not Found""}"
+"","","OSS_007_13","Successfully got object file item.
+Server should return {""httpStatus"":200}"
+"","","OSS_007_14","Successfully got object json item.
+Server should return {""httpStatus"":200}"
+"OSS_009","List Objects API"
+"","","OSS_009_01","If the certificate_serial param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.2"",""message"":""Missing Required Parameter: certificate_serial""}"
+"","","OSS_009_02","If the certificate_serial param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.3"",""message"":""Invalid certificate_serial""}"
+"","","OSS_009_03","If the X-Api-Key Header in request is missing.
+Server should return {""httpStatus"":403,""message"":""Forbidden""}"
+"","","OSS_009_04","If the X-Signature Header in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.0"",""message"":""Missing Required Header: X-Signature""}"
+"","","OSS_009_05","If the signature in request failed the verification.
+Server should return {""httpStatus"":400,""code"":""400.1"",""message"":""Invalid signature""}"
+"","","OSS_009_06","If the access_token param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.6"",""message"":""Missing Required Parameter: access_token""}"
+"","","OSS_009_07","If the access_token param in request is invalid.
+Server should return {""httpStatus"":401,""code"":""401.0"",""message"":""Invalid access_token""}"
+"","","OSS_009_08","If the access_token param in request is expired.
+Server should return {""httpStatus"":401,""code"":""401.1"",""message"":""Access Token Expired""}"
+"","","OSS_009_09_1","If the domain in path is invalid.
+Invalid domain name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_009_09_2","If the domain in path is invalid.
+Invalid domain name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_009_09_3","If the domain in path is invalid.
+Invalid domain name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_009_10","Cannot find domain.
+Server should return {""httpStatus"":404,""code"":""404.0"",""message"":""Domain Not Found""}"
+"","","OSS_009_11","Successfully list empty object item.
+Server should return {""httpStatus"":200,""data"":[]}"
+"","","OSS_009_12","Successfully list objects by all.
+Server should return {""httpStatus"":200}"
+"","","OSS_009_12","Successfully list objects by key.
+Server should return {""httpStatus"":200}"
+"","","OSS_009_12","Successfully list objects by begins_with.
+Server should return {""httpStatus"":200}"
+"OSS_013","Delete Object API"
+"","","OSS_013_01","If the certificate_serial param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.2"",""message"":""Missing Required Parameter: certificate_serial""}"
+"","","OSS_013_02","If the certificate_serial param in request is invalid.
+Server should return {""httpStatus"":400,""code"":""400.3"",""message"":""Invalid certificate_serial""}"
+"","","OSS_013_03","If the X-Api-Key Header in request is missing.
+Server should return {""httpStatus"":403,""message"":""Forbidden""}"
+"","","OSS_013_04","If the X-Signature Header in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.0"",""message"":""Missing Required Header: X-Signature""}"
+"","","OSS_013_05","If the signature in request failed the verification.
+Server should return {""httpStatus"":400,""code"":""400.1"",""message"":""Invalid signature""}"
+"","","OSS_013_06","If the access_token param in request is missing.
+Server should return {""httpStatus"":400,""code"":""400.6"",""message"":""Missing Required Parameter: access_token""}"
+"","","OSS_013_07","If the access_token param in request is invalid.
+Server should return {""httpStatus"":401,""code"":""401.0"",""message"":""Invalid access_token""}"
+"","","OSS_013_08","If the access_token param in request is expired.
+Server should return {""httpStatus"":401,""code"":""401.1"",""message"":""Access Token Expired""}"
+"","","OSS_013_09_1","If the domain in path is invalid.
+Invalid domain name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_013_09_2","If the domain in path is invalid.
+Invalid domain name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_013_09_3","If the domain in path is invalid.
+Invalid domain name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.8"",""message"":""Invalid domain""}"
+"","","OSS_013_10_1","If the key param is invalid.
+Invalid object name begins with number.
+Server should return {""httpStatus"":400,""code"":""400.14"",""message"":""Invalid key""}"
+"","","OSS_013_10_2","If the key param is invalid.
+Invalid object name with unacceptable characters.
+Server should return {""httpStatus"":400,""code"":""400.14"",""message"":""Invalid key""}"
+"","","OSS_013_10_3","If the key param is invalid.
+Invalid object name over 128 characters.
+Server should return {""httpStatus"":400,""code"":""400.14"",""message"":""Invalid key""}"
+"","","OSS_013_11","Cannot find domain.
+Server should return {""httpStatus"":404,""code"":""404.0"",""message"":""Domain Not Found""}"
+"","","OSS_013_12","Cannot find object.
+Server should return {""httpStatus"":404,""code"":""404.1"",""message"":""Object Not Found""}"
+"","","OSS_013_13","Successfully deleted json object item.
+Server should return {""httpStatus"":200}"
+"","","OSS_013_14","Successfully deleted file object item.
+Server should return {""httpStatus"":200}"
+"OSS_005","S3 Event Handler"
+"","","OSS_005_01","Successfully updated domain file_usage and object usage.
+Server should return Domain file usage equals all uploaded Objects usages"
+"OSS_014","Housekeeping"
+"","","OSS_014_01","No message in SQS.
+Server should return SQS is empty"
+"","","OSS_014_02","No Object and S3 files.
+Server should return Deleted SQS message."
+"","","OSS_014_03","Successfully deleted object items in DB and S3 object files under domain.
+Server should return Successfully deleted Object items in DB and Object files in S3 and deleted SQS message."

@@ -33,7 +33,6 @@ categories: pcloud
 
 * Automatic test tools like Cucumber and Mocha can produce a test report.
 
-    [Test Report]({% link /assets/automatic-test/report.html %})
+    [Cucumber Test Report]({% link /assets/automatic-test/report.html %})
 
-
-
+    [Mocha Test Report]({% link /assets/automatic-test/mochawesome-reports/mochawesome.html %})
