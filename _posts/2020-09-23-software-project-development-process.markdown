@@ -7,6 +7,8 @@ categories: webrtc
 
 # Software Project Development Process
 
+    ![Gitflow]({% link /assets/automatic-test/gitflow.png %})
+
 
 
 
