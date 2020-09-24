@@ -19,7 +19,7 @@ categories: pcloud
 
 Try demo: [PCloud Portal demo][pcloud-portal]
 
-![pcloud portal linode diagram](/assets/pcloud/pcloud-portal-linode.png)
+![pcloud portal linode diagram](/assets/pcloud/pcloud-portal-linode1.png)
 
 * Here is how it works. Take "Package Setting" for example:
 
@@ -35,11 +35,11 @@ Try demo: [PCloud Portal demo][pcloud-portal]
 
 
 
-DUreading and PCstore are both Web APP to share the same Sigh-in SSO Web APP. Try demo:
+DuReading and PCstore are both Web APP to share the same Sigh-in SSO Web APP. Try demo:
 
 [PCloud SSO demo][pcloud-sso]
 
-[DUreading demo][dureading]
+[DuReading demo][dureading]
 
 [PCstore demo][pcstore]
 

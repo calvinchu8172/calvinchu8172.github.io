@@ -14,9 +14,9 @@ categories: webrtc
 
 Why suggest Jitsi?
 
-* Jitsi-meet is an open source video-conferencing service.
-* Jitsi-meet can be customized the frontend interface.
-* Most devices support WebRTC standard.
+* Jitsi-meet is an **open source** video-conferencing service.
+* Jitsi-meet can be **customized** the frontend interface.
+* Most devices support **WebRTC standard**.
 
 
 

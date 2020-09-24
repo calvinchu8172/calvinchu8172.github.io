@@ -25,7 +25,7 @@ categories: pcloud
 # Compare TDD and BDD
 
 |             | TDD(Test Driven Development)   | BDD(Behavior Driven Development)  |
-|Definition   | TDD is a development technique that focuses more on the implementation of a feature, function or method| BDD is a development technique that focuses on the system’s behavior, like user flow or response of API |
+|Definition   | TDD is a development technique that focuses more on the implementation of **a feature, function or method**| BDD is a development technique that focuses on the **system’s behavior**, like **user flow** or **response of API** |
 |Participants  | Developer |  Developer, PM, QA, Customers |
 |Language used     | Coding language, NodeJS, Ruby... | Natual language, English, Mandarin... |
 |Main Focus| Unit Test|Understanding Requirements|
