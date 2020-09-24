@@ -18,7 +18,7 @@ categories: interview
 
         [Answer]({% link _posts/2020-09-14-loveiplant-wordpress-structure.markdown %})
 
-    2. 在益科服務請介紹手過產品的規劃架構(含雲端服務)與使用的技術. 規劃的理由與技術的評估理由是？
+    2. 在益科服務請介紹手過產品的規劃架構(含雲端服務)與使用的技術，規劃的理由與技術的評估理由是？
 
         [Answer]({% post_url 2020-09-14-pcloud-structure %})
 
