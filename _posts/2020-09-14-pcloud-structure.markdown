@@ -11,7 +11,7 @@ categories: pcloud
 
 ![pcloud service original diagram](/assets/pcloud/pcloud-ecowork.png)
 
-* The complete insfrastructure is too expensive for persinal project, so I modified to the following single linode server insfrastructure.
+* The complete insfrastructure is too expensive for personal project, so I modified to the following single linode server insfrastructure.
 
 # 2. PCloud Portal Structure Diagram for personal project in Linode
 
